@@ -1,0 +1,74 @@
+.pt-56 {
+  padding-top: 56px;
+}
+
+.pay {
+  .alert {
+    display: none;
+  }
+  input:checked ~ .alert {
+    display: block;
+  }
+}
+
+.bill {
+  .modal.fade .modal-dialog {
+    transform: translate(0, 50px);
+  }
+  .modal.show .modal-dialog {
+    transform: none;
+  }
+  .modal-dialog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    }
+    .modal-content {
+      border-radius: 12px 12px 0 0; 
+    }
+}
+
+.position-sticky {
+  top: 56px;
+  @include media-breakpoint-up(lg) {
+    top: 90px;
+  }
+}
+
+.teacher {
+  .card {
+    max-width: 416px;
+    margin-inline: auto;
+  }
+  .card-img-top {
+    width: auto;
+  }
+  .card-body {
+    background: $white;
+    margin-right: 32px;
+    margin-top: -40px;
+    border-radius: 20px;
+  }
+}
+
+.text-deco {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: -30px;
+    background-image: url("https://github.com/hexschool/2024-web-layout-training-code/blob/master/week8/assets/images/deco/flower-1.png?raw=true");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.result .modal {
+  backdrop-filter: blur(5px);
+}
