@@ -1,0 +1,11 @@
+.btn-primary {
+    color: $white;
+    &:hover {
+        background: $primary-dark ;
+        color: $white;
+    }
+}
+
+.btn:disabled {
+    background-color: $neutral-200;
+}
