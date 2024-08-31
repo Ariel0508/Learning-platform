@@ -409,17 +409,37 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
+//Custom
 $spacer: 1rem !default;
 $spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  2_5: $spacer * .75, //12
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-  6: $spacer * 5,
+  // customized spacers start
+  0: 0, 
+  1: $spacer * .25, // 4px 
+  2: $spacer * .5, // 8px 
+  3: $spacer * .75, // 12px 
+  4: $spacer, // 16px
+  5: $spacer * 1.25, // 20px 
+  6: $spacer * 1.5, // 24px 
+  7: $spacer * 2, // 32px 
+  8: $spacer * 2.5, // 40px 
+  9: $spacer * 3, // 48px 
+  10: $spacer * 3.75, // 60px 
+  11: $spacer * 5,  // 80px 
+  12: $spacer * 6.25,  // 100px 
+  13: $spacer * 7.5,  // 120px 
+  14: $spacer * 10  // 160px 
+  // customized spacers end
 ) !default;
+// $spacers: (
+//   0: 0,
+//   1: $spacer * .25,
+//   2: $spacer * .5,
+//   2_5: $spacer * .75, //12
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   5: $spacer * 3,
+//   6: $spacer * 5,
+// ) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -427,11 +447,25 @@ $spacers: (
 // Define the edge positioning anchors of the position utilities.
 
 // scss-docs-start position-map
+//Custom
 $position-values: (
   0: 0,
+  10: 10%, // custom
+  20: 20%, // custom
+  30: 30%, // custom
+  40: 40%, // custom
   50: 50%,
+  60: 60%, // custom
+  70: 70%, // custom
+  80: 80%, // custom
+  90: 90%, // custom
   100: 100%
 ) !default;
+// $position-values: (
+//   0: 0,
+//   50: 50%,
+//   100: 100%
+// ) !default;
 // scss-docs-end position-map
 
 // Body
@@ -644,14 +678,16 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
-$h7-font-size:                $font-size-base * 0.875 !default; //Custom
-$h8-font-size:                $font-size-base * 0.75 !default; //Custom
+//Custom
+$h1-font-size:                $font-size-base * 3 !default;
+$h2-font-size:                $font-size-base * 2.5 !default;
+$h3-font-size:                $font-size-base * 2 !default;
+$h4-font-size:                $font-size-base * 1.75 !default;
+$h5-font-size:                $font-size-base * 1.5 !default;
+$h6-font-size:                $font-size-base * 1.25 !default;
+$h7-font-size:                $font-size-base !default;
+$h8-font-size:                $font-size-base * 0.875 !default; //Custom
+$h9-font-size:                $font-size-base * 0.75 !default; //Custom
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -662,8 +698,9 @@ $font-sizes: (
   4: $h4-font-size,
   5: $h5-font-size,
   6: $h6-font-size,
-  7: $h7-font-size, //14px Custom
-  8: $h8-font-size, //12px Custom
+  7: $h7-font-size, //16px Custom
+  8: $h8-font-size, //14px Custom
+  9: $h9-font-size, //12px Custom
 ) !default;
 // scss-docs-end font-sizes
 
@@ -699,7 +736,6 @@ $lead-font-size:              $font-size-base * 1.25 !default;
 $lead-font-weight:            300 !default;
 
 $small-font-size:             .875em !default;
-
 $sub-sup-font-size:           .75em !default;
 
 // fusv-disable
@@ -825,13 +861,16 @@ $input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
 // $input-btn-padding-x-sm:      .5rem !default;
 $input-btn-padding-y-sm:      .75rem !default;
 $input-btn-padding-x-sm:      1rem !default;
-$input-btn-font-size-sm:      $font-size-sm !default;
+//Custom
+// $input-btn-font-size-sm:      $font-size-sm !default;
+$input-btn-font-size-sm:      $h7-font-size !default;
 
 $input-btn-padding-y-lg:      .5rem !default;
 $input-btn-padding-x-lg:      1rem !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
-
-$input-btn-border-width:      var(--#{$prefix}border-width) !default;
+//Custom
+// $input-btn-border-width:      var(--#{$prefix}border-width) !default;
+$input-btn-border-width:      0 !default;
 // scss-docs-end input-btn-variables
 
 
