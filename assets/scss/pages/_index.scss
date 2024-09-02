@@ -18,6 +18,107 @@
   background-color: transparent;
 }
 
+//course
+.course {
+  .main-title {
+    width: 288px;
+    .text-deco {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: -88px;
+        left: 0;
+        @include media-breakpoint-up(xl) {
+          top: 0;
+          left: -80px;
+        }
+        background-image: url("/assets/images/deco/polygon-1.png");
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 319px;
+        @include media-breakpoint-up(xxl) {
+          width: 438px;
+        }
+        height: 98px;
+        bottom: -88px;
+        left: 0;
+        background-image: url("/assets/images/deco/line-2.png");
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+
+.course-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-x: auto; 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .course-card-group {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 24px;
+    }
+    @include media-breakpoint-up(xl) {
+    flex-direction: column;
+    .course-card-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    }
+}
+.course-card-item {
+  flex: 0 0 auto; 
+  width: 272px; 
+  @include media-breakpoint-up(xxl) {
+    max-width: 306px;
+    width: 100%; 
+    flex: 0 0 auto; 
+    }
+    .course-card {
+      border-radius: 16px;
+   
+      .classNum {
+       color: #6E7485;
+      }
+    }
+  }
+  .bg-orange-icon {
+    background: #FF994F; 
+  }
+  .bg-gary-icon {
+    background: #5E5E5E;
+  }
+  .bg-pink-icon {
+    background: #FF9BAD;
+  }
+  .bg-purple-icon {
+    background: #564FFD;
+  }
+  .bg-blue-icon {
+    background: #54DFF2;
+  }
+  .bg-green-icon {
+    background: #52E9BC;
+  }
+  .bg-lightPurple-icon {
+    background: #CF93FF;
+  }
+}
+
 //teacher
 .teacher {
   padding-bottom: 120px;
