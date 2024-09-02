@@ -18,6 +18,15 @@
   background-color: transparent;
 }
 
+/* 募資課程區塊 */
+.funding-course-card {
+  border: transparent;
+  .card-img-top {
+    height: 272px;
+    object-fit: cover;
+  }
+}
+
 //course
 .course {
   .main-title {
