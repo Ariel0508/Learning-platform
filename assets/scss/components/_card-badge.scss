@@ -1,5 +1,14 @@
 .badge {
     line-height: 1.5;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    &-sm {
+        font-weight: $font-weight-normal;
+        padding: 4px 8px;
+        top: 4px;
+        left: 4px;
+    }
     &-primary {
         background: $primary-50;
         color: $primary;
