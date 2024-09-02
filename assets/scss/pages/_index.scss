@@ -35,6 +35,7 @@
 .category-filter-tags {
   white-space: nowrap;
   overflow-x: auto;
+  padding: 1px; /* 補被 overflow-x 裁掉的邊 */
   &::-webkit-scrollbar {
     display: none;
   }
