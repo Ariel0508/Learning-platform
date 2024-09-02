@@ -18,3 +18,10 @@ ol, ul, li {
     padding: 0;
     margin: 0;
 }
+
+/* 畫面縮小時隱藏多餘文字 */
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
