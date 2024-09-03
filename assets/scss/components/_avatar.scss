@@ -1,13 +1,12 @@
-.card-avatar {
-    height: 44px;
-    width: 44px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
+.card-avatar-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .avatar-img {
-    // width: 100%;
-    // object-fit: cover;
-    transform: scale(1.6) translateY(4px); 
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
 }
