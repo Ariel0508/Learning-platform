@@ -19,13 +19,15 @@
 }
 
 /* banner test start */
-.banner-hero {
-  max-width: 1600px;
-  height: 800px;
-}
-.swiper-slide-prev,
-.swiper-slide-next {
-  opacity: .5;
+.bannerSwiper {
+  .banner-hero {
+    max-width: 1600px;
+    height: 800px;
+  }
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    opacity: .5;
+  }
 }
 /* banner test start */
 
