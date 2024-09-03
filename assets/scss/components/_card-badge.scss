@@ -9,6 +9,11 @@
         top: 4px;
         left: 4px;
     }
+    &-md {
+        font-weight: $font-weight-normal;
+        padding: 4px 12px;
+        position: static;  // 取消絕對定位
+    }
     &-primary {
         background: $primary-50;
         color: $primary;
@@ -16,5 +21,9 @@
     &-alert {
         background: $danger-100;
         color: $danger;
+    }
+    &-gray {
+        background: $neutral-200;
+        color: $neutral-400;
     }
 }
