@@ -136,7 +136,15 @@
     width: 14px;
     height: 14px;
   }
- 
+
+    .banner-hero {
+      max-width: 1600px;
+      height: 800px;
+    }
+    .swiper-slide-prev,
+    .swiper-slide-next {
+      opacity: .5;
+    }
 }
 
 //course

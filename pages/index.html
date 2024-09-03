@@ -23,7 +23,7 @@
                 <div class="banner-tag px-3 py-2 rounded-pill bg-primary-100  d-flex align-items-center me-2">
                   <p class="text-primary fs-8 me-1 text-nowrap fw-bold">熱銷課程</p>
                   <div class="banner-tag-icon">
-                    <img src="../assets/images/icons/ic_fire.png" alt="icon">
+                    <img src="../assets/images/icons/ic_fire.png" alt="icon" class="banner-hero">
                   </div>
                 </div>
                 <p class="fs-8 fs-lg-6 fw-bold">給成人的鋼琴入門課，一小時教你彈奏上手！</p>
@@ -38,7 +38,7 @@
                 <div class="banner-tag px-3 py-2 rounded-pill bg-primary-100  d-flex align-items-center me-2">
                   <p class="text-primary fs-8 me-1 text-nowrap fw-bold">熱銷課程</p>
                   <div class="banner-tag-icon">
-                    <img src="../assets/images/icons/ic_fire.png" alt="icon">
+                    <img src="../assets/images/icons/ic_fire.png" alt="icon" class="banner-hero">
                   </div>
                 </div>
                 <p class="fs-8 fs-lg-6 fw-bold">給成人的鋼琴入門課，一小時教你彈奏上手！</p>
@@ -53,7 +53,7 @@
                 <div class="banner-tag px-3 py-2 rounded-pill bg-primary-100  d-flex align-items-center me-2">
                   <p class="text-primary fs-8 me-1 text-nowrap fw-bold">熱銷課程</p>
                   <div class="banner-tag-icon">
-                    <img src="../assets/images/icons/ic_fire.png" alt="icon">
+                    <img src="../assets/images/icons/ic_fire.png" alt="icon" class="banner-hero">
                   </div>
                 </div>
                 <p class="fs-8 fs-lg-6 fw-bold">給成人的鋼琴入門課，一小時教你彈奏上手！</p>
@@ -445,7 +445,6 @@
   <%- include('./layout/footer'); -%>
     <script>
       const bannerSwiper = new Swiper(".bannerSwiper", {
-        cssMode: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -455,44 +454,14 @@
         },
         mousewheel: true,
         keyboard: true,
+        loop: "infinite",
         breakpoints: {
           992: {
             centeredSlides: true,
             slidesPerView: 1.2, // 顯示部分的第一和第三張圖片
             spaceBetween: 40, // 根據需要調整圖片之間的間距
-            effect: "creative",
-            creativeEffect: {
-              prev: {
-                // Array with translate X, Y and Z values
-                translate: ["-100%", 0, 0],
-                // Array with rotate X, Y and Z values (in deg)
-                rotate: 0,
-                // Slide opacity
-                opacity: 0.5,
-                // Slide scale
-                scale: 1,
-                // Enables slide shadow
-                shadow: 0,
-                // Transform origin, e.g. `left bottom`
-                origin: 0,
-              },
-              next: {
-                 // Array with translate X, Y and Z values
-                 translate: ["-100%", 0, 0],
-                // Array with rotate X, Y and Z values (in deg)
-                rotate: 0,
-                // Slide opacity
-                opacity: 0.5,
-                // Slide scale
-                scale: 1,
-                // Enables slide shadow
-                shadow: 0,
-                // Transform origin, e.g. `left bottom`
-                origin: 0,
-              },
-            },
-          },
-        }
+        },
+      }
       });
 
       const teacherSwiper = new Swiper(".teacherSwiper", {
