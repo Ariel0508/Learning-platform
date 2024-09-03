@@ -18,6 +18,29 @@
   background-color: transparent;
 }
 
+/* 募資課程區塊 */
+.funding-course-card {
+  border: transparent;
+  @include media-breakpoint-down(lg) {
+    width: 320px;
+
+  }
+
+  .card-img-top {
+    height: 272px;
+    object-fit: cover;
+  }
+}
+
+.category-filter-tags {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 1px; /* 補被 overflow-x 裁掉的邊 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 //course
 .course {
   .main-title {
