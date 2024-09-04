@@ -4,7 +4,7 @@ body {
 
 .intro-bg {
     height: 419px;
-    background: url("../../../assets/images/hero-4.png") no-repeat #CCE9FF 100% 100% / 100%;
+    background: url("../assets/images/hero-4.png") repeat #CCE9FF 70% 100% / cover;
 }
 
 .intro-badge {
@@ -27,9 +27,8 @@ body {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
 }
 
-.intro-icon {
-    width: 24px;
-    height: 24px;
+.bg-card {
+    background-color: $white;
 }
 
 .intro-border {
@@ -61,4 +60,29 @@ body {
 
     }
 
+}
+
+.nav-link:hover {
+    font-weight: bold;
+}
+
+.nav-link {
+    color: $neutral-400;
+}
+
+.nav-link.nav-active {
+    font-weight: bold;
+    color: $primary;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+        width: 32px;
+        height: 4px;
+        border-radius: 10px;
+        background-color: $primary;
+    }
 }
