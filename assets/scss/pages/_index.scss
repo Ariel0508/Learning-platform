@@ -1,5 +1,5 @@
 .nav-mt {
-  margin-top: 64px;
+  margin-top: 76px;
   @include media-breakpoint-up(md) {
     margin-top: 152px;
   }
@@ -18,30 +18,11 @@
   background-color: transparent;
 }
 
-/* 募資課程區塊 */
-.funding-course-card {
-  border: transparent;
-  @include media-breakpoint-down(lg) {
-    width: 320px;
-
-  }
-
-  .card-img-top {
-    height: 272px;
-    object-fit: cover;
-  }
-}
-
-.category-filter-tags {
-  white-space: nowrap;
-  overflow-x: auto;
-  padding: 1px; /* 補被 overflow-x 裁掉的邊 */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
 //banner
-.banner {
+.banner { 
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 72px;
+  }
   .swiper-slide {
     width: 100%;
     height: 400px;
@@ -78,8 +59,6 @@
   }
   .swiper-slide img {
     display: block;
-    // width: 100%;
-    // height: 350px;
     object-fit: cover;
   }
   .swiper-pagination-bullet-active {
@@ -161,8 +140,214 @@
 
     .swiper-slide-prev,
     .swiper-slide-next {
-      opacity: .5;
+      @include media-breakpoint-up(lg) {
+        opacity: .5;
+      }
     }
+}
+
+/* 募資課程區塊 */
+.funding-course {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    background: url("/assets/images/deco/flower-2.png") no-repeat;
+    background-size: cover;
+
+    z-index: -1;
+    @include media-breakpoint-up(lg) {
+      width: 560px;
+      height: 560px;
+    }
+  }
+
+  .swiper-pagination-funding {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $primary;
+    width: 24px;
+    height: 8px;
+    border-radius: 100px;
+  }
+  .swiper, .swiper-slide {
+    padding-bottom: 24px;
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 0;
+    }
+}
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+}
+.swiper-wrapper {
+      width: 100% !important;
+
+}
+.swiper-slide {
+  @include media-breakpoint-up(lg) {
+      text-align: center;
+      height: calc((100% - 24px) / 2) !important;
+      width: 33% !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 24px !important;
+    }
+  }
+
+  .funding-course-card {
+    border: transparent;
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  
+    .card-img-top {
+      height: 272px;
+      object-fit: cover;
+    }
+  }
+  
+  .funding-course-btn {
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      max-width: 162px;
+    }
+  }
+  
+  .category-filter-tags {
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 1px; /* 補被 overflow-x 裁掉的邊 */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+// buy
+.buy {
+  z-index: 1;
+  background: linear-gradient(180deg, #F0F6FF 0%, #FFFFFF 100%);
+  .responsive-container {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 215px;
+      left: -280px;
+      width: 480px;
+      height: 480px;
+      background: url("/assets/images/deco/flower-3.png") no-repeat;
+      background-size: cover;
+      @include media-breakpoint-up(lg) {
+        width: 560px;
+        height: 560px;
+      }
+    }
+  }
+  .main-title {
+    width: 351px;
+    @include media-breakpoint-up(md) {
+      width: 100%;
+    }
+  }
+  .text-deco {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      left: -30px;
+      background-image: url("/assets/images/deco/flower-1.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  .rounded-pill {
+    width: 101px;
+    height: 37px;
+    top: 16px;
+    left: 16px;
+  }
+  .buy-tag-icon {
+    width: 14px;
+    height: 14px;
+  }
+.swiper-wrapper {
+  @include media-breakpoint-up(lg) {
+    margin-left: 72px;
+    overflow: hidden;
+  }
+}
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      z-index: 10;
+      display: block;
+      width: 56px;
+      height: 56px;
+      padding: 10px;
+      border-radius: $border-radius;
+      background: $white;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .swiper-button-next {
+    @include media-breakpoint-up(lg) {
+      right: 250px;
+      background: $primary;
+      color: $white;
+    }
+  }
+  .swiper-button-prev {
+    @include media-breakpoint-up(lg) {
+    left: 280px;
+    }
+  }
+  .swiper-button-prev:after {
+    content: '\F12C';
+    font-family: bootstrap-icons !important;
+    color: $primary;
+    font-size: 36px;
+  }
+  .swiper-button-next:after{
+    content: '\F135';
+    font-family: bootstrap-icons !important;
+    font-size: 36px;
+  }
+  .swiper-slide {
+    padding-bottom: 5px;
+    &:nth-of-type(1) {
+      display: none;
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      width: 306px !important;
+    }
+    .card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
 }
 
 //course
@@ -296,6 +481,20 @@
       width: 100%;
     }
   }
+  .text-deco {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      left: -30px;
+      background-image: url("/assets/images/deco/flower-1.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
     .card {
       max-width: 416px;
       margin-inline: auto;
@@ -318,20 +517,7 @@
       }
     }
   
-  .text-deco {
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      top: -30px;
-      left: -30px;
-      background-image: url("/assets/images/deco/flower-1.png");
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
-  }
+  
   .bg-deco {
     position: relative;
     &::after {
@@ -346,50 +532,4 @@
       z-index: -1;
     }
   }
-}
-
-// 非首頁
-.pt-56 {
-  padding-top: 56px;
-}
-
-.pay {
-  .alert {
-    display: none;
-  }
-  input:checked ~ .alert {
-    display: block;
-  }
-}
-
-.bill {
-  .modal.fade .modal-dialog {
-    transform: translate(0, 50px);
-  }
-  .modal.show .modal-dialog {
-    transform: none;
-  }
-  .modal-dialog {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    }
-    .modal-content {
-      border-radius: 12px 12px 0 0; 
-    }
-}
-
-.position-sticky {
-  top: 56px;
-  @include media-breakpoint-up(lg) {
-    top: 90px;
-  }
-}
-
-
-.result .modal {
-  backdrop-filter: blur(5px);
 }
