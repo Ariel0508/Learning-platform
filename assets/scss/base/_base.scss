@@ -6,22 +6,15 @@ img {
 a {
     color: inherit;
     display: inline-block;
+    text-decoration: none;
 }
 
 p {
     letter-spacing: 0.02em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    letter-spacing: 0.02em;
-}
-
 ul,li {
     list-style: none;
     padding: 0;
+    margin: 0;
 }

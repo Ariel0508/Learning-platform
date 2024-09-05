@@ -15,8 +15,12 @@
 
 @import "./base/base";
 @import "./components/button";
+@import "./components/filter-tag";
+@import "./components/avatar";
+@import "./components/card-badge";
 
 @import './layout/header';
 @import './layout/footer';
 
 @import './pages/index';
+@import './pages/auth';

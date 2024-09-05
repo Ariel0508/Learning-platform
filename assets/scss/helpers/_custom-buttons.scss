@@ -2,10 +2,19 @@
     color: $white;
     &:hover {
         background: $primary-dark ;
-        color: $white;
     }
 }
 
 .btn:disabled {
     background-color: $neutral-200;
+    border: 1px solid $neutral-200;
 }
+
+.btn {
+    height: 56px;
+}
+.btn-sm {
+    height: 48px;
+}
+
+
