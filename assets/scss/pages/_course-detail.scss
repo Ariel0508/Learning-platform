@@ -1,44 +1,9 @@
+// 背景底色
 body {
     background-color: $neutral-100;
 }
 
-.intro-bg {
-    height: 419px;
-    background: url("../assets/images/hero-4.png") repeat #CCE9FF 70% 100% / cover;
-}
-
-.intro-badge {
-    color: $primary;
-    background-color: $primary-50;
-    border-radius: 100px;
-    padding: 8px 12px;
-    font-weight: 600;
-}
-
-.rwd-btn {
-    width: 100%;
-
-    @media (min-width: 768px) {
-        width: auto;
-    }
-}
-
-.card {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
-}
-
-.bg-card {
-    background-color: $white;
-}
-
-.intro-border {
-    border-right: none;
-
-    @media (min-width: 768px) {
-        border-right: 1px solid $neutral-200;
-    }
-}
-
+// banner 背景漸層色
 .bg-gradient {
     position: relative;
 
@@ -62,12 +27,48 @@ body {
 
 }
 
-.nav-link:hover {
-    font-weight: bold;
+//intro-banner
+.intro-bg {
+    height: 419px;
+    background: url("../assets/images/hero-4.png") repeat #CCE9FF 70% 100% / cover;
 }
 
+.intro-badge {
+    color: $primary;
+    background-color: $primary-50;
+    border-radius: 100px;
+    padding: 8px 12px;
+    font-weight: 600;
+}
+
+.rwd-btn {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: auto;
+    }
+}
+
+// banner-foot
+.card {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+}
+
+.intro-border {
+    border-right: none;
+
+    @media (min-width: 768px) {
+        border-right: 1px solid $neutral-200;
+    }
+}
+
+// Nav & Tabs
 .nav-link {
     color: $neutral-400;
+
+    &:hover {
+        font-weight: bold;
+    }
 }
 
 .nav-link.nav-active {
@@ -84,5 +85,60 @@ body {
         height: 4px;
         border-radius: 10px;
         background-color: $primary;
+    }
+}
+
+// course-intro
+.border-left {
+    position: relative;
+    text-align: justify;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 4px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: $primary;
+
+        @media (min-width: 768px) {
+            height: 16px;
+
+        }
+    }
+}
+
+.mask-viewmore {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%);
+    }
+}
+
+.radius-rwd {
+    border-radius: 0;
+
+    @media (min-width: 768px) {
+        border-radius: 20px;
+    }
+}
+
+.flower-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    @media (min-width: 768px) {
+        width: 24px;
+        height: 24px;
     }
 }
