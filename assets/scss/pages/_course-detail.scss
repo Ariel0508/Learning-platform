@@ -142,3 +142,78 @@ body {
         height: 24px;
     }
 }
+
+//accordion
+
+.accordion-icon {
+    color: $neutral-400;
+    font-size: 24px;
+}
+
+.accordion-item {
+    // border-radius: 8px;
+    margin-bottom: 16px;
+
+    .accordion-button {
+        border-radius: 8px 8px 0 0 !important;
+
+        &.collapsed {
+            border-radius: 8px !important;
+        }
+    }
+
+    & a:hover {
+        background-color: $neutral-200;
+    }
+
+    &-icon {
+        font-size: 24px;
+    }
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-button {
+    background-color: $neutral-200;
+
+    &:not(.collapsed) {
+        background-color: $neutral-200;
+        color: #000000;
+    }
+}
+
+.accordion-button::after {
+    color: $neutral-400;
+}
+
+// .quantity-time {
+//     letter-spacing: 0.28px;
+// }
+
+.try-it {
+    border-radius: 8px;
+}
+
+.circle {
+    width: 6px;
+    height: 6px;
+    background-color: $neutral-300;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+// .accordion-button::after {
+//     content: "\e313"; //icon 名稱
+//     font-family: "Material Icons"; // 採用的 icon 庫
+//     width: auto !important;
+//     height: auto !important;
+//     font-size: 24px;
+//     color: $neutral-400;
+//     background-image: none;
+// }
+
+// .accordion-button:not(.collapsed)::after {
+//     background-image: none;
+// }
