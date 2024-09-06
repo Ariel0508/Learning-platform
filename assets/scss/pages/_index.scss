@@ -1,3 +1,215 @@
+.nav-mt {
+  margin-top: 64px;
+  @include media-breakpoint-up(md) {
+    margin-top: 152px;
+  }
+}
+//swiper
+.swiper {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.swiper-slide {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: transparent;
+}
+
+//course
+.course {
+  .main-title {
+    width: 288px;
+    .text-deco {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: -88px;
+        left: 0;
+        @include media-breakpoint-up(xl) {
+          top: 0;
+          left: -80px;
+        }
+        background-image: url("/assets/images/deco/polygon-1.png");
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 319px;
+        @include media-breakpoint-up(xxl) {
+          width: 438px;
+        }
+        height: 98px;
+        bottom: -88px;
+        left: 0;
+        background-image: url("/assets/images/deco/line-2.png");
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+
+.course-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-x: auto; 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .course-card-group {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 24px;
+    }
+    @include media-breakpoint-up(xl) {
+    flex-direction: column;
+    .course-card-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    }
+}
+.course-card-item {
+  flex: 0 0 auto; 
+  width: 272px; 
+  @include media-breakpoint-up(xxl) {
+    max-width: 306px;
+    width: 100%; 
+    flex: 0 0 auto; 
+    }
+    .course-card {
+      border-radius: 16px;
+   
+      .classNum {
+       color: #6E7485;
+      }
+    }
+  }
+  .bg-orange-icon {
+    background: #FF994F; 
+  }
+  .bg-gary-icon {
+    background: #5E5E5E;
+  }
+  .bg-pink-icon {
+    background: #FF9BAD;
+  }
+  .bg-purple-icon {
+    background: #564FFD;
+  }
+  .bg-blue-icon {
+    background: #54DFF2;
+  }
+  .bg-green-icon {
+    background: #52E9BC;
+  }
+  .bg-lightPurple-icon {
+    background: #CF93FF;
+  }
+}
+
+//teacher
+.teacher {
+  padding-bottom: 120px;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 152px;
+  }
+  .swiper-pagination-teacher {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $primary;
+    width: 24px;
+    height: 8px;
+    border-radius: 100px;
+  }
+  .swiper, .swiper-slide {
+    padding-bottom: 24px;
+    // @include media-breakpoint-up(md) {
+    //   padding-bottom: 0;
+    // }
+}
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+}
+// .swiper-slide {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+  .main-title {
+    width: 197px;
+    @include media-breakpoint-up(md) {
+      width: 100%;
+    }
+  }
+    .card {
+      max-width: 416px;
+      margin-inline: auto;
+      background: transparent;
+    }
+    .card-img-top {
+      max-width: 291px;
+      @include media-breakpoint-up(md) {
+        max-width: 336px;
+      }
+    }
+    .card-body {
+      background: $white;
+      margin-right: 32px;
+      margin-top: -40px;
+      border-radius: 20px;
+      max-width: 327px;
+      @include media-breakpoint-up(md) {
+        max-width: 384px;
+      }
+    }
+  
+  .text-deco {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      left: -30px;
+      background-image: url("/assets/images/deco/flower-1.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  .bg-deco {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 452px;
+      top: 80px;
+      left: 0;
+      background-image: url("/assets/images/deco/line-1.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+}
+
+// 非首頁
 .pt-56 {
   padding-top: 56px;
 }
@@ -38,36 +250,6 @@
   }
 }
 
-.teacher {
-  .card {
-    max-width: 416px;
-    margin-inline: auto;
-  }
-  .card-img-top {
-    width: auto;
-  }
-  .card-body {
-    background: $white;
-    margin-right: 32px;
-    margin-top: -40px;
-    border-radius: 20px;
-  }
-}
-
-.text-deco {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: -30px;
-    left: -30px;
-    background-image: url("https://github.com/hexschool/2024-web-layout-training-code/blob/master/week8/assets/images/deco/flower-1.png?raw=true");
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-}
 
 .result .modal {
   backdrop-filter: blur(5px);
