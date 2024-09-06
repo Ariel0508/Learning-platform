@@ -188,10 +188,6 @@ body {
     color: $neutral-400;
 }
 
-// .quantity-time {
-//     letter-spacing: 0.28px;
-// }
-
 .try-it {
     border-radius: 8px;
 }
@@ -204,16 +200,79 @@ body {
     display: inline-block;
 }
 
-// .accordion-button::after {
-//     content: "\e313"; //icon 名稱
-//     font-family: "Material Icons"; // 採用的 icon 庫
-//     width: auto !important;
-//     height: auto !important;
-//     font-size: 24px;
-//     color: $neutral-400;
-//     background-image: none;
-// }
+//lector
+.breadcrumb-items:not(:last-child)::after {
+    content: "|";
+    margin: 0 12px;
+    color: $neutral-200;
 
-// .accordion-button:not(.collapsed)::after {
-//     background-image: none;
-// }
+    @media (min-width: 768px) {
+        margin: 0 16px;
+    }
+}
+
+hr {
+    border-color: $neutral-200;
+    margin: 24px 0;
+
+    @media (min-width: 768px) {
+        margin: 40px 0;
+    }
+}
+
+.hexschool-logo {
+    @media (min-width: 768px) {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+// QA
+.intro-avatar {
+    width: 32px;
+    height: 32px;
+
+    @media (min-width: 768px) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.intro-avatar-ans {
+    width: 44px;
+    height: 44px;
+}
+
+textarea::placeholder {
+    color: $neutral-300;
+}
+
+.flower-icon-lg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.flower-icon-sm {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.intro-form-btn {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: auto;
+        margin-left: auto;
+    }
+}
+
+.lector-baadge {
+    font-size: 12px;
+    padding: 4px 8px;
+    color: $primary;
+    border: 1px solid $primary;
+    border-radius: 8px;
+    line-height: 14px;
+}
