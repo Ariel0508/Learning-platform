@@ -40,7 +40,3 @@ const populartopicsswiper = new Swiper(".popular-topics-swiper", {
     1200: { slidesPerView: 6 },
   },
 });
-
-// import './assets/scss/all.scss';
-// import 'bootstrap/dist/js/bootstrap.min.js';
-// console.log("Hello world!");

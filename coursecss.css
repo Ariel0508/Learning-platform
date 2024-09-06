@@ -1,0 +1,42 @@
+.swiper-slide {
+  width: auto;
+  margin-right: 2rem;
+}
+.page-item .page-link {
+  width: 40px; /* 設置按鈕的寬度，您可以根據需求調整 */
+  height: 40px; /* 設置按鈕的高度，這樣它就會成為正方形 */
+  display: flex; /* 讓按鈕內部的內容使用 Flexbox 布局 */
+  align-items: center; /* 讓內容垂直居中 */
+  justify-content: center; /* 讓內容水平居中 */
+  padding: 0; /* 移除內部的預設填充，確保寬高一致 */
+  margin: 0 5px; /* 控制按鈕之間的間距 */
+  border-radius: 5px; /* 設置圓角，讓按鈕外觀更加美觀 */
+}
+
+.course-swiper-button-prev {
+  background-image: url("/week/assets/images/ic_ArrowLeft.png"); /* 替換成你的圖像路徑 */
+  background-size: contain; /* 調整背景圖大小以適應按鈕 */
+  background-repeat: no-repeat; /* 防止背景重複 */
+  background-position: center; /* 將背景圖居中 */
+  width: 40px; /* 根據需要調整按鈕寬度 */
+  height: 40px; /* 根據需要調整按鈕高度 */
+  border: none; /* 如果需要，移除邊框 */
+}
+
+.course-swiper-button-prev::after {
+  display: none; /* 隱藏預設的 Swiper 按鈕圖示 */
+}
+
+.course-swiper-button-next {
+  background-image: url("/week/assets/images/ic_ArrowRight.png"); /* 替換成你的圖像路徑 */
+  background-size: contain; /* 調整背景圖大小以適應按鈕 */
+  background-repeat: no-repeat; /* 防止背景重複 */
+  background-position: center; /* 將背景圖居中 */
+  width: 40px; /* 根據需要調整按鈕寬度 */
+  height: 40px; /* 根據需要調整按鈕高度 */
+  border: none; /* 如果需要，移除邊框 */
+}
+
+.course-swiper-button-next::after {
+  display: none; /* 隱藏預設的 Swiper 按鈕圖示 */
+}
