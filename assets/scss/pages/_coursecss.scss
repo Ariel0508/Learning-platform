@@ -42,7 +42,7 @@
   .btn-outline-secondary {
     color: $neutral-400;
     &:hover {
-      background: $primary;
+      background: $primary !important;
       color: white;
     }
   }
