@@ -281,3 +281,12 @@ textarea::placeholder {
 .page-item .page-link {
     border-radius: 8px;
 }
+
+//cart
+.hover-white {
+color: $primary;
+&:hover {
+    color: $white;
+}
+}
+}
