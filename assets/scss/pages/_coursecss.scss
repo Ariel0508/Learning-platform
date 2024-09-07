@@ -1,6 +1,6 @@
 .swiper-slide {
   width: auto;
-  margin-right: 2rem;
+  // margin-right: 2rem;
 }
 .page-item .page-link {
   width: 40px; /* 設置按鈕的寬度，您可以根據需求調整 */
@@ -113,6 +113,14 @@
   //   padding-bottom: 0;
   // }
 }
+
+//trending 
+.trending {
+  .swiper-slide {
+    width: 306px !important;
+  }
+}
+
 //course
 .course {
   .main-title {

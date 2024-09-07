@@ -5,6 +5,7 @@ const classswiper = new Swiper(".class_swiper", {
     prevEl: ".class-swiper-button-prev",
   },
   slidesPerView: "auto",
+  spaceBetween: 8,
   breakpoints: {
     1200: { slidesPerView: "auto" },
   },
