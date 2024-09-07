@@ -52,15 +52,17 @@
   width: auto;
   // margin-right: 2rem;
 }
-.page-item .page-link {
-  width: 40px; /* 設置按鈕的寬度，您可以根據需求調整 */
-  height: 40px; /* 設置按鈕的高度，這樣它就會成為正方形 */
-  display: flex; /* 讓按鈕內部的內容使用 Flexbox 布局 */
-  align-items: center; /* 讓內容垂直居中 */
-  justify-content: center; /* 讓內容水平居中 */
-  padding: 0; /* 移除內部的預設填充，確保寬高一致 */
-  margin: 0 5px; /* 控制按鈕之間的間距 */
-  border-radius: 5px; /* 設置圓角，讓按鈕外觀更加美觀 */
+.course-list-pagination {
+  .page-item .page-link {
+    width: 40px; /* 設置按鈕的寬度，您可以根據需求調整 */
+    height: 40px; /* 設置按鈕的高度，這樣它就會成為正方形 */
+    display: flex; /* 讓按鈕內部的內容使用 Flexbox 布局 */
+    align-items: center; /* 讓內容垂直居中 */
+    justify-content: center; /* 讓內容水平居中 */
+    padding: 0; /* 移除內部的預設填充，確保寬高一致 */
+    margin: 0 5px; /* 控制按鈕之間的間距 */
+    border-radius: 5px; /* 設置圓角，讓按鈕外觀更加美觀 */
+  }
 }
 
 .course-swiper-button-prev {
@@ -134,11 +136,13 @@
   color: $primary;
   font-size: 36px;
 }
-.swiper-button-next:after{
-  content: '\F135';
-  font-family: bootstrap-icons !important;
-  color: $primary;
-  font-size: 36px;
+.trending {
+  .swiper-button-next:after{
+    content: '\F135';
+    font-family: bootstrap-icons !important;
+    color: $primary;
+    font-size: 36px;
+  }
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
