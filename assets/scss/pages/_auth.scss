@@ -24,7 +24,7 @@
         &::before {
             content: "";
             position: absolute;
-            background-image: url("../assets/images/deco/Asterisk 1.png");
+            background-image: url("/assets/images/deco/Asterisk 1.png");
             top: -40px;
             left: -40px;
             width: 100%;
@@ -35,7 +35,7 @@
         &::after {
             content: "";
             position: absolute;
-            background-image: url("../assets/images/deco/Summertime Sadness.png");
+            background-image: url("/assets/images/deco/Summertime Sadness.png");
             bottom: -400px;
             right: -200px;
             width: 100%;
