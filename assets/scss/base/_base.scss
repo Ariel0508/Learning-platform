@@ -13,8 +13,32 @@ p {
     letter-spacing: 0.02em;
 }
 
-ul,li {
+ol, ul, li {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
+/* 畫面縮小時隱藏多餘文字 */
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//google icon outline fill 
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  
+  .icon-filled{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }

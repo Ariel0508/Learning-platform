@@ -1,4 +1,28 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+footer  {
+  background: #282828;
+  border-radius: 40px 40px 0 0;
+  .container-fluid {
+    background: #282828;
+    border-radius: 40px 40px 0 0;
+  }
+  .footer-logo{
+    width: 200px;
+  }
+  .soical-icon  {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $white;
+    &:hover {
+      background: $neutral-400;
+    }
+  }
 }
+// <span class="material-symbols-outlined">
+// slideshow
+// </span>
+// <i class="bi bi-line"></i>
+// <i class="bi bi-facebook"></i>
+// <i class="bi bi-youtube"></i>
