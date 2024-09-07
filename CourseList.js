@@ -10,16 +10,25 @@ const classswiper = new Swiper(".class_swiper", {
   },
 });
 
-const courseswiper = new Swiper(".course_swiper", {
+const trendingSwiper = new Swiper(".trending_swiper", {
   // 左右箭頭
   navigation: {
-    nextEl: ".course-swiper-button-next",
-    prevEl: ".course-swiper-button-prev",
+    nextEl: ".trending-swiper-button-next",
+    prevEl: ".trending-swiper-button-prev",
   },
   slidesPerView: 1.5,
-  spaceBetween: "10px",
+  spaceBetween: 16,
   breakpoints: {
-    1200: { slidesPerView: 4 },
+    768: { 
+      slidesPerView: 2,
+    },
+    992: { 
+      slidesPerView: 3,
+    },
+    1200: { 
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
   },
 });
 
@@ -35,8 +44,16 @@ const populartopicsswiper = new Swiper(".popular-topics-swiper", {
     prevEl: ".popular-topics-swiper-button-prev",
   },
   slidesPerView: 1.7,
-  spaceBetween: "10px",
+  spaceBetween: 24,
   breakpoints: {
-    1200: { slidesPerView: 6 },
+    768: { 
+      slidesPerView: 3,
+    },
+    992: { 
+      slidesPerView: 4,
+    },
+    1200: { 
+      slidesPerView: 6 
+    },
   },
 });

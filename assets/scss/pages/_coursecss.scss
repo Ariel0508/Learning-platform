@@ -41,6 +41,78 @@
   display: none; /* 隱藏預設的 Swiper 按鈕圖示 */
 }
 
+// trending card & course card
+.course-main-card {
+  border: transparent;
+  // max-width: 306px;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+  @include media-breakpoint-up(lg) {
+    display: block;
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+    border-radius: $border-radius;
+    background: $white;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+.swiper-button-next {
+  @include media-breakpoint-up(lg) {
+    right: 130px
+  }
+}
+.swiper-button-prev {
+  @include media-breakpoint-up(lg) {
+    left: 130px;
+  }
+}
+.swiper-button-prev:after {
+  content: '\F12C';
+  font-family: bootstrap-icons !important;
+  color: $primary;
+  font-size: 36px;
+}
+.swiper-button-next:after{
+  content: '\F135';
+  font-family: bootstrap-icons !important;
+  color: $primary;
+  font-size: 36px;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+}
+
+// popular-topics
+// .swiper-pagination-popular-topics {
+//   @include media-breakpoint-up(md) {
+//     display: none;
+//   }
+// }
+.swiper-pagination-bullet-active {
+  background-color: $primary;
+  width: 24px;
+  height: 8px;
+  border-radius: 100px;
+}
+.swiper, .swiper-slide {
+  padding-bottom: 24px;
+  // @include media-breakpoint-up(lg) {
+  //   padding-bottom: 0;
+  // }
+}
 //course
 .course {
   .main-title {
