@@ -1,0 +1,273 @@
+.course-banner {
+  position: relative;
+  
+  &-header {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    background-image: 
+      url(/assets/images/deco/polygon-2.svg),
+      url(/assets/images/deco/Summertime-Sadness-light.svg);
+    background-position: 10% 30%, center left;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  &::after {
+    top: 0;
+    left: 0;
+    background-image: 
+      url(/assets/images/deco/polygon-2.svg),
+      url(/assets/images/deco/Summertime-Sadness-light.svg);
+    background-position: 75% 15%, 100% 100px;
+    @include media-breakpoint-down(md) {
+      background-size: 40px 40px, 240px 240px;
+      background-position: 10% 15%, 100% 100%;
+    }
+  }
+
+  .btn-outline-secondary {
+    color: $neutral-400;
+    &:hover {
+      background: $primary !important;
+      color: white;
+    }
+  }
+}
+
+.swiper-slide {
+  width: auto;
+  // margin-right: 2rem;
+}
+.page-item .page-link {
+  width: 40px; /* 設置按鈕的寬度，您可以根據需求調整 */
+  height: 40px; /* 設置按鈕的高度，這樣它就會成為正方形 */
+  display: flex; /* 讓按鈕內部的內容使用 Flexbox 布局 */
+  align-items: center; /* 讓內容垂直居中 */
+  justify-content: center; /* 讓內容水平居中 */
+  padding: 0; /* 移除內部的預設填充，確保寬高一致 */
+  margin: 0 5px; /* 控制按鈕之間的間距 */
+  border-radius: 5px; /* 設置圓角，讓按鈕外觀更加美觀 */
+}
+
+.course-swiper-button-prev {
+  background-image: url("/week/assets/images/ic_ArrowLeft.png"); /* 替換成你的圖像路徑 */
+  background-size: contain; /* 調整背景圖大小以適應按鈕 */
+  background-repeat: no-repeat; /* 防止背景重複 */
+  background-position: center; /* 將背景圖居中 */
+  width: 40px; /* 根據需要調整按鈕寬度 */
+  height: 40px; /* 根據需要調整按鈕高度 */
+  border: none; /* 如果需要，移除邊框 */
+}
+
+.course-swiper-button-prev::after {
+  display: none; /* 隱藏預設的 Swiper 按鈕圖示 */
+}
+
+.course-swiper-button-next {
+  background-image: url("/week/assets/images/ic_ArrowRight.png"); /* 替換成你的圖像路徑 */
+  background-size: contain; /* 調整背景圖大小以適應按鈕 */
+  background-repeat: no-repeat; /* 防止背景重複 */
+  background-position: center; /* 將背景圖居中 */
+  width: 40px; /* 根據需要調整按鈕寬度 */
+  height: 40px; /* 根據需要調整按鈕高度 */
+  border: none; /* 如果需要，移除邊框 */
+}
+
+.course-swiper-button-next::after {
+  display: none; /* 隱藏預設的 Swiper 按鈕圖示 */
+}
+
+// trending card & course card
+.course-main-card {
+  border: transparent;
+  // max-width: 306px;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+  @include media-breakpoint-up(lg) {
+    display: block;
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+    border-radius: $border-radius;
+    background: $white;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+.swiper-button-next {
+  @include media-breakpoint-up(lg) {
+    right: 130px
+  }
+}
+.swiper-button-prev {
+  @include media-breakpoint-up(lg) {
+    left: 130px;
+  }
+}
+.swiper-button-prev:after {
+  content: '\F12C';
+  font-family: bootstrap-icons !important;
+  color: $primary;
+  font-size: 36px;
+}
+.swiper-button-next:after{
+  content: '\F135';
+  font-family: bootstrap-icons !important;
+  color: $primary;
+  font-size: 36px;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+}
+
+// popular-topics
+// .swiper-pagination-popular-topics {
+//   @include media-breakpoint-up(md) {
+//     display: none;
+//   }
+// }
+.swiper-pagination-bullet-active {
+  background-color: $primary;
+  width: 24px;
+  height: 8px;
+  border-radius: 100px;
+}
+.swiper, .swiper-slide {
+  padding-bottom: 24px;
+  // @include media-breakpoint-up(lg) {
+  //   padding-bottom: 0;
+  // }
+}
+
+//trending 
+.trending {
+  .swiper-slide {
+    width: 306px !important;
+  }
+}
+
+//course
+.course {
+  .main-title {
+    width:300px;
+    .text-deco {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: -88px;
+        left: 0;
+        @include media-breakpoint-up(xl) {
+          top: 0;
+          left: -80px;
+        }
+        background-image: url("/assets/images/deco/polygon-1.png");
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 319px;
+        @include media-breakpoint-up(xxl) {
+          width: 438px;
+        }
+        height: 98px;
+        bottom: -88px;
+        left: 0;
+        background-image: url("/assets/images/deco/line-2.png");
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+
+.course-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-x: auto; 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .course-card-group {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 24px;
+    }
+    @include media-breakpoint-up(xl) {
+    flex-direction: column;
+    .course-card-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    }
+}
+.course-card-item {
+  flex: 0 0 auto; 
+  width: 272px; 
+  @include media-breakpoint-up(xxl) {
+    max-width: 306px;
+    width: 100%; 
+    flex: 0 0 auto; 
+    }
+    .course-card {
+      border-radius: 16px;
+   
+      .classNum {
+       color: #6E7485;
+      }
+    }
+  }
+  .bg-orange-icon {
+    background: #FF994F; 
+  }
+  .bg-gary-icon {
+    background: #5E5E5E;
+  }
+  .bg-pink-icon {
+    background: #FF9BAD;
+  }
+  .bg-purple-icon {
+    background: #564FFD;
+  }
+  .bg-blue-icon {
+    background: #54DFF2;
+  }
+  .bg-green-icon {
+    background: #52E9BC;
+  }
+  .bg-lightPurple-icon {
+    background: #CF93FF;
+  }
+}
