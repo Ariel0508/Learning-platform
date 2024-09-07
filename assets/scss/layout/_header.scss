@@ -147,27 +147,19 @@ nav form {
   display: flex;
   align-items: center;
   &::after {
-    content: "\e69b";
-    font-family: "Material Symbols Outlined";
+    content: "\F282";
+    font-family: bootstrap-icons !important;
     border: none;
   }
 }
 .dropdown-item {
-  border-radius: 12px;
   &:not(.dropdown-item-all) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     &::after {
-      content: "\e5cc";
-      font-family: "Material Symbols Outlined";
-    }
-  }
-  &:hover {
-    background: $primary;
-    color: $white;
-    .material-symbols-outlined {
-      color: $white !important;
+      content: "\F285";
+      font-family: bootstrap-icons !important;
     }
   }
 }
@@ -176,15 +168,11 @@ nav form {
   max-width: 863px;
   &[data-bs-popper] {
     left: 15%;
-    margin-top: 8px;
   }
   .dropdown-menu {
     &-level-one, &-level-two, &-level-three {
       height: calc(100vh - 200px);
       overflow-y: scroll;
-      // &::-webkit-scrollbar {
-      //   display: none;
-      // }
     }
     &-level-one, &-level-two {
       padding: 12px 12px 4px;
@@ -193,9 +181,6 @@ nav form {
     &-level-three {
       padding: 12px 12px 4px;
       width: 48%;
-    }
-    @include media-breakpoint-up(lg) {
-      z-index: 999;
     }
   }
 }
@@ -206,6 +191,7 @@ nav form {
   &::-webkit-scrollbar {
     display: none;
   }
+
 }
 
 .tab-pane .tab-hover {
@@ -278,4 +264,5 @@ nav form {
 .alert-card-text {
   width: 232px;
   text-wrap: wrap;
+
 }
