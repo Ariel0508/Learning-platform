@@ -46,4 +46,78 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+}
+
+.tab-pane .tab-hover {
+  border-radius: 12px;
+  cursor: pointer;
+  &:hover {
+    background: $primary;
+    color: $white;
+    .material-symbols-outlined {
+      color: $white !important;
+    }
+  }
+}
+.dropdown-menu-level-three {
+  .dropdown-item {
+    &:hover {
+      background: $white;
+      color: $dark;
+    }
+    .rounded-pill {
+      width: 44px;
+      height: 29px;
+      top: 4px;
+      left: 4px;
+    }
+  }
+}
+.nav-course-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.nav-course-card-title, .nav-course-card-price, .nav-course-card-assess { 
+  width: 243px;
+  text-wrap: wrap;
+}
+
+.nav-alert.dropdown-menu {
+    left: -600%;
+    width: 320px;
+    &[data-bs-popper] {
+      top: 135%;
+      right: 50%;
+      margin-top: 8px;
+    }
+    .dropdown-item {
+      &:hover {
+        background: $white;
+        color: $dark;
+        .brand-icon {
+            .material-symbols-outlined {
+              color: $info !important;
+            }
+        }
+        .bell-icon {
+          .material-symbols-outlined {
+            color: $danger !important;
+          }
+        }
+      }
+    } 
+    }
+.alert-card-icon {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert-card-text {
+  width: 232px;
+  text-wrap: wrap;
+
 }
