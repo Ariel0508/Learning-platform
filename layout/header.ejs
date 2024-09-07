@@ -7,7 +7,7 @@
   <ul class="navbar-nav align-items-center flex-grow-1 pe-lg-3">
     <li class="nav-item dropdown position-static d-none d-lg-flex">
       <div class="one-level">
-        <a class="nav-link dropdown-toggle px-lg-6 py-lg-0" href="#" role="button" data-bs-toggle="dropdown"
+        <a class="toggleButton nav-link dropdown-toggle px-lg-6 py-lg-0" href="#" role="button" data-bs-toggle="dropdown"
           data-bs-auto-close="outside" aria-expanded="false">
           探索
         </a>
@@ -199,7 +199,7 @@
         <li class="nav-avatar nav-item dropdown d-none d-lg-block me-4">
           <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
             data-bs-auto-close="outside">
-            <a class="dropdown-toggle btn p-0 border-0 position-relative ms-auto" type="button"
+            <a class="toggleButton dropdown-toggle btn p-0 border-0 position-relative ms-auto" type="button"
               data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
               <span class="material-symbols-outlined fs-5">
                 notifications
@@ -301,7 +301,7 @@
         </li>
         <!-- 登入 -->
         <div class="nav-avatar nav-item dropdown d-none d-lg-block">
-          <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+          <a class="toggleButton dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
             data-bs-auto-close="outside">
             <div class="d-flex align-items-center">
               <img src="../assets/images/avatar-1.png" alt="avatar-1" class="me-2 avatar-img">
@@ -532,6 +532,7 @@
         </div>
       </div>
 </nav>
+<div id="overlay" class="overlay"></div>
 
 <script>
   let lastScrollTop = 0;
@@ -548,4 +549,21 @@
     }
     lastScrollTop = scrollTop;
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggleButton');
+    const overlay = document.getElementById('overlay');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            overlay.style.display = 'block';
+        });
+    });
+
+    overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+});
+
+
 </script>
