@@ -1,0 +1,12 @@
+.card-avatar-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-img {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}

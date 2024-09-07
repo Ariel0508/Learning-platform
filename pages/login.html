@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'LEARNING - login</title>
+</head>
+
+<body>
+    <div class="auth d-lg-flex py-lg-8 align-items-center vh-100">
+        <div class="auth-cover d-lg-block d-none w-lg-40 ms-lg-8 me-lg-3 flex-shrink-0 position-relative overflow-hidden rounded-4">
+            <div class="auth-cover-content">
+                <img src="../assets/images/login-img.jpg" alt="login-img" class="auth-cover-img rounded-4">
+                <div class="auth-text position-absolute top-50 start-50 translate-middle">
+                    <h1>
+                        <img src="../assets/images/logo-white.svg" alt="logo-white" class="logo mb-8">
+                    </h1>
+                    <h2 class="mb-8 fs-1 text-white">你的線上<br>專屬學習課</h2>
+                    <h3 class="fs-1 text-white">隨時隨地、想上就上</h3>
+                </div>
+            </div>
+        </div>
+
+        <main class="w-lg-60">
+            <div class="container">
+                <div class="row justify-content-center px-lg-0 py-lg-0 px-3 py-8">
+                    <div class="col-lg-6">
+                        <h4 class="mb-lg-8 mb-6 fs-lg-1 fs-3">歡迎回來！</h4>
+
+                        <div class="social-login-buttons d-flex flex-column gap-4 mb-lg-8 mb-6 ">
+                            <a href="#" class="btn btn-social-login ">
+                                <img src="../assets/images/icons/ic_google.png" alt="ic_google" class="btn-social-link">
+                                使用 Google 帳號登入
+                            </a>
+                            <a href="#" class="btn btn-social-login ">
+                                <img src="../assets/images/icons/ic_facebook.png" alt="ic_facebook" class="btn-social-link">
+                                使用 Facebook 帳號登入
+                            </a>
+                            <a href="#" class="btn btn-social-login">
+                                <img src="../assets/images/icons/ic_apple.png" alt="ic_apple" class="btn-social-link">
+                                使用 Apple 帳號登入
+                            </a>
+                        </div>
+                        
+                        <p class="mb-4 fw-bold">或使用 Learning 帳號登入</p>
+                        <form class="mb-lg-8 mb-6 text-neutral-400">
+                            <div class="mb-4">
+                                <label for="exampleFormControlInput1" class="form-label">
+                                    電子信箱
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" class="form-control px-4" id="exampleFormControlInput1" placeholder="請輸入電子信箱" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="inputPassword" class="form-label">
+                                    密碼
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <div class="position-relative">
+                                    <input type="password" id="inputPassword" class="form-control px-4 mb-2" aria-describedby="passwordHelpBlock" placeholder="請輸入密碼" required>
+                                    <span class="toggle-password"><img src="../assets/images/icons/ic_eye_close.svg" alt="ic_eye_close"></span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-lg-8 mb-6">
+                                <div class="form-check mb-0">
+                                    <input class="form-check-input" type="checkbox" value="記住帳號" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        記住帳號
+                                    </label>
+                                </div>
+                                <a href="#" class="link-none-deco">忘記密碼？</a>
+                            </div>
+                            
+                            <input type="submit" value="立即登入" class="btn btn-primary w-100" id="submitBtn" disabled>
+                        </form>
+                        
+                        <p>沒有 Learning 帳號嗎？
+                            <a href="signup.html" class="link-deco-primary">立即註冊</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const emailInput = document.getElementById('exampleFormControlInput1');
+        const passwordInput = document.getElementById('inputPassword');
+        const submitBtn = document.getElementById('submitBtn');
+        const togglePassword = document.querySelector('.toggle-password');
+
+        // 在所有欄位都有填寫的情況下才啟用按鈕
+        function checkInputs() {
+            if (emailInput.value.trim() !== '' && passwordInput.value.trim() !== '' ) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+
+        emailInput.addEventListener('input', checkInputs);
+        passwordInput.addEventListener('input', checkInputs);
+
+        // 切換 icon 以顯示或隱藏密碼
+        togglePassword.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                togglePassword.innerHTML = '<img src="../assets/images/icons/ic_eye-open.svg" alt="ic_eye_open">'
+            } else {
+                passwordInput.type = 'password';
+                togglePassword.innerHTML = '<img src="../assets/images/icons/ic_eye_close.svg" alt="ic_eye_close">'
+            }
+        })
+    </script>
+
+    <script type="module" src="../main.js"></script>
+</body>
+
+</html>
